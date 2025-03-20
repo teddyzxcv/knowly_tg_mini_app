@@ -12,11 +12,6 @@ WORKDIR /app
 # Copy package files
 COPY --chown=appuser:appuser package.json package-lock.json ./
 
-# Install mkcert and generate certificates
-RUN npm install -g mkcert && \
-    mkcert -install && \
-    mkcert localhost
-
 # Install dependencies including TypeScript globally
 RUN npm install -g typescript && \
     npm install
@@ -30,9 +25,8 @@ USER appuser
 # Build the project
 RUN npm run build
 
-# Expose ports
+# Expose port
 EXPOSE 3000
-EXPOSE 443
 
-# Run the development server with HTTPS on all interfaces
-CMD ["npm", "run", "dev:https", "--", "--host", "0.0.0.0"]
+# Run the development server
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
