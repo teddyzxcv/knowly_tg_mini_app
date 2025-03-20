@@ -28,5 +28,13 @@ RUN npm run build
 # Expose port 3000
 EXPOSE 3000
 
-# Run the production server on all interfaces
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0"]
+# Install mkcert and generate certificates
+RUN apk add --no-cache mkcert && \
+    mkcert -install && \
+    mkcert localhost
+
+# Expose HTTPS port
+EXPOSE 443
+
+# Run the development server with HTTPS on all interfaces
+CMD ["npm", "run", "dev:https", "--", "--host", "0.0.0.0"]
