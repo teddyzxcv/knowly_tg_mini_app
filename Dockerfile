@@ -28,5 +28,5 @@ RUN npm run build
 # Expose port 3000
 EXPOSE 3000
 
-# Run the production server
-CMD ["npm", "run", "preview"]
+# Run the production server on all interfaces
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0"]
