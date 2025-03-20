@@ -1,0 +1,169 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#root {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+#add-btn {
+    font-size: 24px;
+    color: #007aff;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.book-cover {
+    width: 120px;
+    height: 180px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#articles ul {
+    list-style: none;
+    padding: 0;
+}
+
+#articles li {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#articles li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+#articles li {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+#root {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    padding-top: 40px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#add-btn {
+    font-size: 28px;
+    color: #007aff;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-cover:nth-child(1) {
+    background-image: url('https://covers.zlibcdn2.com/covers299/books/a7/6b/24/a76b24c1f08f084f59a7494a9991f89f.jpg');
+}
+
+.book-cover:nth-child(2) {
+    background-image: url('https://covers.zlibcdn2.com/covers222/books/c9/e3/21/c9e32149b934333ca9c95d4f7218f183.jpg');
+}
+
+.book-cover:nth-child(3) {
+    background-image: url('https://covers.zlibcdn2.com/covers112/books/5a/9c/ca/5a9cca64544049eb51792ca1ca958549.jpg');
+}
+
+#articles li {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
