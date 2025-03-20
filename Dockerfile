@@ -12,8 +12,8 @@ WORKDIR /app
 # Copy package files
 COPY --chown=appuser:appuser package.json package-lock.json ./
 
-# Install mkcert and generate certificates as root
-RUN apk add --no-cache mkcert && \
+# Install mkcert and generate certificates
+RUN npm install -g mkcert && \
     mkcert -install && \
     mkcert localhost
 
