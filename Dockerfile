@@ -12,6 +12,11 @@ WORKDIR /app
 # Copy package files
 COPY --chown=appuser:appuser package.json package-lock.json ./
 
+# Install mkcert and generate certificates as root
+RUN apk add --no-cache mkcert && \
+    mkcert -install && \
+    mkcert localhost
+
 # Install dependencies including TypeScript globally
 RUN npm install -g typescript && \
     npm install
@@ -25,15 +30,8 @@ USER appuser
 # Build the project
 RUN npm run build
 
-# Expose port 3000
+# Expose ports
 EXPOSE 3000
-
-# Install mkcert and generate certificates
-RUN apk add --no-cache mkcert && \
-    mkcert -install && \
-    mkcert localhost
-
-# Expose HTTPS port
 EXPOSE 443
 
 # Run the development server with HTTPS on all interfaces
